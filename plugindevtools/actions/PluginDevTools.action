@@ -15,6 +15,19 @@
         <isCheckable>false</isCheckable>
         <statusTip></statusTip>
         </Action>
+
+        <Action name="PluginDevToolsOpenAsDialog">
+        <icon></icon>
+        <text>Open as Dialog</text>
+        <whatsThis></whatsThis>
+        <toolTip></toolTip>
+        <iconText></iconText>
+        <activationFlags>10000</activationFlags>
+        <activationConditions>0</activationConditions>
+        <shortcut>f11</shortcut>
+        <isCheckable>false</isCheckable>
+        <statusTip></statusTip>
+        </Action>
     </Actions>
 </ActionCollection>
 

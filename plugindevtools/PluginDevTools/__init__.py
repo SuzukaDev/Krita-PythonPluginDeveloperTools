@@ -63,8 +63,7 @@ def setup():
         else:
             docker.applyDockerMode()
     testExtension.dynamicCreateAction(toggleOnAndOff, Krita.instance().activeWindow(), 'PluginDevToolsToggleOnOff', 'Toggle On or Off')
-
-
+    testExtension.dynamicCreateAction(docker.applyDialogMode, Krita.instance().activeWindow(), 'PluginDevToolsOpenAsDialog', 'Open as Dialog')
 
 # Some settings require Krita.instance().activeWindow().qwindow() as parameter
 # Wait Krita.instance().activeWindow().qwindow() completely created then set the widgets

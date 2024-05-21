@@ -133,6 +133,7 @@ class PluginDevToolsDocker(DockWidget):
             #print('    sender= ', senderName)
             #print('')
             return
+        self.floatModeDialog.signal_closed.connect(self._closeAndConnectSignalClosed)
         self.setFloating(False)
         self.close()
         self.floatModeDialog.setCentralWidget(self.centralWidget)
@@ -145,3 +146,9 @@ class PluginDevToolsDocker(DockWidget):
         self.mutex.unlock()
 
 
+    def _closeAndConnectSignalClosed(self):
+        """Closes the dialog window and connects to `signal_closed` its previous signal: `self.applyDockerMode('dialog.signal_closed')`"""
+        self.close()
+        self.floatModeDialog.signal_closed.disconnect(self._closeAndConnectSignalClosed)
+        # Connect the previous signal so that the applyDockerMode() maintains its original behaviour
+        self.floatModeDialog.signal_closed.connect(lambda : self.applyDockerMode('dialog.signal_closed'))
