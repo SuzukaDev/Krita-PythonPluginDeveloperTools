@@ -1,0 +1,25 @@
+# Ignore everything
+# *
+# /*/
+# /*
+
+# FOLDERS
+# Pycache
+# /gpgroups/__pycache__/
+# /gpgroups/custom_classes/__pycache__/
+# gpgroups/custom_classes/__pycache__/
+**/__pycache__/
+**/__pycache__/**
+
+.VSCodeCounter/**
+
+# # but not this files
+# !Print_to_python_console.py
+# !GPLayerSets.py
+# !GPLayerGroups.py
+# !stretching_bending_bone_generator.py
+# # And not this folders
+# !/gpgroups/
+
+# # Deprecated (can delete it)
+# !/GPGroupsIcons/
